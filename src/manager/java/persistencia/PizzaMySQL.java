@@ -58,7 +58,7 @@ public class PizzaMySQL implements PizzaDAO{
 		MassaMySQL e = new MassaMySQL();
 		b.setMassa((e.getMassa(dados, 0)));
 
-		sql = "SELECT I.* FROM Ingrediente AS I, Pizza_ingrediente AS Ponte WHERE (Ponte.Pizza_id = ?) AND (I.Ingrediente_id = Ponte.Ingrediente_id)";
+		sql = "SELECT I.* FROM Ingrediente AS I, Pizza_Ingrediente AS Ponte WHERE (Ponte.Pizza_id = ?) AND (I.Ingrediente_id = Ponte.Ingrediente_id)";
 		con.prepararPst(sql);
 		con.setParam(1, b.getId());
 		ArrayList<ArrayList<String>> ingrediente = con.selecionar();

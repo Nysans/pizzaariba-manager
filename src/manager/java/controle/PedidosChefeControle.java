@@ -49,7 +49,7 @@ public class PedidosChefeControle {
 		});
 
 		listar();
-		PedidosTableModel model = (PedidosTableModel) View.getTbPedidos().getModel();
+                    PedidosTableModel model = (PedidosTableModel) View.getTbPedidos().getModel();
 		model.addTableModelListener(new TableModelListener() {
 			@Override
 			public void tableChanged(TableModelEvent e) {
